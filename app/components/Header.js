@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import useTheme from '../hooks/useTheme';
 
 export default function Header() {
@@ -8,7 +9,10 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header-top">
-        <img src="/assets/logos/devjobs-logo.svg" alt="Devjobs Logo" />
+        <Link href="/">
+          <img src="/assets/logos/devjobs-logo.svg" alt="Devjobs Logo" style={{ cursor: 'pointer' }} />
+        </Link>
+
         <div className="themeOptions">
           <label>
             <span>
