@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Header from './components/Header';
 import SearchForm from './components/SearchForm';
 import JobList from './components/JobList';
 import JobDetails from './components/JobDetails';
@@ -26,7 +25,6 @@ export default function Home() {
 
   return (
     <>
-      <Header />
       <main className="container">
         <SearchForm jobs={jobs} onFilter={handleFilter} />
         {selectedJob

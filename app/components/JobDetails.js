@@ -1,4 +1,20 @@
+"use client";
+import { useState, useEffect } from "react";
+
 export default function JobDetails({ job }) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreen = () => {
+      const width = window.innerWidth;
+      setIsMobile(width <= 767);
+    };
+
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+
   return (
     <div className="card-details">
       <div className="card-top">
@@ -48,10 +64,11 @@ export default function JobDetails({ job }) {
       </div>
 
       <div className="company-info-bottom">
-        <div className="company-inf">
-          <h2>{job.position}</h2>
-          <span>{job.company}</span>
-        </div>
+        {!isMobile &&
+          <div className="company-inf">
+            <h2>{job.position}</h2>
+            <span>{job.company}</span>
+          </div>}
         <div className="bottom-btn">
           <a href={job.apply}>Apply Now</a>
         </div>

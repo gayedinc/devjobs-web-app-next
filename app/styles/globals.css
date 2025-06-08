@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -149,8 +151,12 @@ a {
 }
 
 .details-info {
-  margin-top: 24px;
+  margin-top: 200px;
   margin-bottom: 64px;
+}
+
+.company-info-bottom {
+  width: 327px;
 }
 
 .card-top {
@@ -158,7 +164,9 @@ a {
   border-radius: 6px;
   padding: 32px;
   text-align: center;
-  position: relative;
+  position: absolute;
+  width: 327px;
+  top: 135px;
 }
 
 .card-head {
@@ -225,6 +233,16 @@ a {
   width: 100%;
   border-radius: 5px;
   margin-top: 50px;
+}
+
+.bottom-btn a {
+  background-color: #5964E0;
+  color: #fff;
+  padding-block: 16px;
+  display: block;
+  text-align: center;
+  width: 100%;
+  border-radius: 5px;
 }
 
 .description p, .requirements p, .will-do-section p {
@@ -325,30 +343,29 @@ ol li::before {
   margin-top: -40px; 
 }
 
-/* şimdi yazdıklarım */
-
 .searchForm {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: white;
-  padding: 12px 16px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  margin: 0 16px;
+  border-radius: 6px;
   position: relative;
+  padding: 16px;
   gap: 12px;
 }
 
 .searchForm input[type="text"] {
-  flex: 1;
   border: none;
-  font-size: 14px;
   color: #19202D;
-  padding: 10px 12px;
-  border-radius: 6px;
-  background-color: #f4f6f8;
   outline: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  padding-top: 4px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.84px;
 }
 
 .searchForm button[type="button"] {
@@ -359,10 +376,14 @@ ol li::before {
 }
 
 .searchForm button[type="submit"] {
-  background-color: #5964E0;
+  color: white;
+  background-color: #5964e0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 100%;
   border: none;
-  padding: 10px;
-  border-radius: 6px;
+  border-radius: 5px;
+  padding: 16px;
   cursor: pointer;
 }
 
@@ -372,17 +393,19 @@ ol li::before {
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   z-index: 1000;
+}
+
+.location-mobil {
+  border-bottom: 1px solid #6E8098;
 }
 
 .modal-content {
   background: white;
-  width: 100%;
+  width: 327px;
   padding: 24px;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
 }
 
 .modal-content input[type="text"] {
@@ -390,32 +413,43 @@ ol li::before {
   padding-left: 40px;
   width: 100%;
   border: none;
-  border-radius: 6px;
-  background-color: #f4f6f8;
   margin-bottom: 16px;
   height: 48px;
-  font-size: 14px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
 }
 
 .modal-content label {
   display: flex;
   align-items: center;
   gap: 12px;
+  margin-block: 24px;
   font-weight: 700;
-  margin-bottom: 24px;
   font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
 }
 
 .modal-content button {
   width: 100%;
-  height: 48px;
+  padding-block: 16px;
   border: none;
-  border-radius: 6px;
+  border-radius: 5px;
   background-color: #5964E0;
   color: white;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
   cursor: pointer;
+}
+
+.desktop-fulltime-search {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
 }
 
 .card-logo {
@@ -438,6 +472,46 @@ ol li::before {
   top: -25px;
   left: 139px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content input[type="checkbox"],
+.tablet-desktop-search input[type="checkbox"] {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 3px;
+  border: 2px solid #ccc;
+  position: relative;
+  opacity: 0.3;
+  cursor: pointer;
+  background-color: #ccc;
+}
+
+.modal-content input[type="checkbox"]:checked,
+.tablet-desktop-search input[type="checkbox"]:checked  {
+  background-color: #5964E0;
+  opacity: 1;
+  outline: none;
+  border: 0;
+}
+
+.modal-content input[type="checkbox"]:checked::before,
+.tablet-desktop-search input[type="checkbox"]:checked::before  {
+  content: '✔';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 1;
+  opacity: 1;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -506,6 +580,26 @@ body.darkMode {
   .description h2, .requirements h2, .will-do-section h2 {
     color: #fff;
   }
+
+  .search-area-container {
+    background: #19202D;
+  }
+
+  .tablet-desktop-search input[type="text"]:nth-child(1) {
+    border: 1px solid #303642;
+  }
+
+  .tablet-desktop-search input[type="text"]:nth-child(2) {
+    border: 1px solid #303642;
+  }
+
+  .tablet-desktop-search label.checkbox-label {
+    color: #fff;
+  }
+
+  .searchForm input[type="text"] {
+    color: #fff;
+  }
 }
 
 /* Tablet Start */
@@ -544,21 +638,85 @@ body.darkMode {
     display: block;
   }
 
+  .inputs-wrapper {
+    display: flex;
+    gap: 15px;
+    flex: 1;
+  }
+
+  .inputs-wrapper input {
+    flex: 1;
+    height: 48px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding-left: 48px;
+    background-size: 20px;
+  }
+
+  .options-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    white-space: nowrap;
+  }
+
   .search-area-container {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-top: -40px;
-    
+    padding: 16px;
   }
-  
-   .searchForm {
+
+  .searchForm {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: nowrap;
+    gap: 16px;
     padding: 0;
-  } 
-  
+  }
+
+  .tablet-desktop-search {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .tablet-desktop-search input[type="text"]:nth-child(1) {
+    background: url("/assets/img/search-icon.svg") no-repeat 16px center;
+    background-size: 20px;
+    padding-left: 48px;
+    width: 200px;
+    height: 48px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+
+  .tablet-desktop-search input[type="text"]:nth-child(2) {
+    background: url("/assets/img/location-icon.svg") no-repeat 16px center;
+    background-size: 20px;
+    padding-left: 48px;
+    width: 200px;
+    height: 48px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+
+  .tablet-desktop-search label.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    white-space: nowrap;
+    color: #19202D;
+  }
+
   .searchBtn {
     font-size: 16px;
     font-weight: 700;
@@ -566,23 +724,11 @@ body.darkMode {
     text-align: center;
     color: #FFFFFF;
     background: #5964E0;
-    border-radius: 5px;
-    padding-block: 16px;
-    border: 0;
-    padding-inline: 35.5px;
-  }
-
-  .flex {
-    gap: 16px;
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-  }
-
-  .flex-alternative {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+    border-radius: 6px;
+    padding: 16px 32px;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
   }
 
   .card-top {
@@ -594,6 +740,8 @@ body.darkMode {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: absolute;
+    top: 120px;
   }
 
   .card-top a {
@@ -606,7 +754,8 @@ body.darkMode {
     justify-content: space-between;
   }
   
-  .details-info a {
+  .details-info a, 
+  .bottom-btn a  {
     width: 141px;
     margin-top: 0;
   }
@@ -641,8 +790,13 @@ body.darkMode {
   }
 
   .details-info {
-    margin-top: 32px;
+    margin-top: 140px;
     margin-bottom: 53px;
+    width: 689px;
+  }
+
+  .company-info-bottom {
+    width: 689px;
   }
   
   .d-none {
@@ -778,5 +932,17 @@ body.darkMode {
 
   .card-top {
     width: 730px;
+  }
+
+  .details-info {
+    width: 730px;
+  }
+
+  .company-info-bottom {
+    width: 730px;
+  }
+
+  .desktop-fulltime-search {
+    background-color: red;
   }
 }
